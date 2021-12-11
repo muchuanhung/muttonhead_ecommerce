@@ -1,5 +1,5 @@
 <template>
   <h1>
-    404 Page Not Found
+   homepage
   </h1>
 </template>
