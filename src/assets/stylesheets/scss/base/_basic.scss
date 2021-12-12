@@ -1,0 +1,15 @@
+@import "../base/color";
+
+/* ------- Basic CSS ------- */
+body {
+  font-family: $standard-font-family;
+  font-size: $standard-font-size;
+  background-color: var(--bg-color);
+  color: var(--body-color);
+}
+
+main {
+  min-height: 70vh;
+  background-color: var(--bg-color);
+  padding-top: 70px;
+}

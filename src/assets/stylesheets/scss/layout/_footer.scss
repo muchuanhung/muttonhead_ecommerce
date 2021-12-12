@@ -1,0 +1,67 @@
+@import "../base/breakpoint";
+@import "../base/color";
+@import "../base/shadow";
+
+/* -- Footer -- */
+footer {
+  display: none;
+  background-color: var(--footer-bg);
+  padding: 40px 24px;
+  color: var(--footer-color);
+  @include pc-media {
+    display: block;
+  }
+  .footer-container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    &__brand {
+      display: flex;
+      align-items: center;
+      &__link {
+        display: flex;
+        align-items: center;
+        img {
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+        }
+        &__brand-name {
+          display: inline-block;
+          font-family: $brand-font-family;
+          color: var(--footer-color-title);
+          font-weight: 900;
+          font-size: 18px;
+          letter-spacing: 0.75px;
+        }
+      }
+    }
+    &__info-column {
+      &__title {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--footer-color-title);
+      }
+      &__info-list {
+        margin-top: 24px;
+        line-height: 150%;
+        &__item {
+          &__link {
+            &:hover {
+              color: var(--footer-color-title);
+            }
+            &:active {
+              color: $rose-pink;
+            }
+            .footer-icon {
+              margin-right: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
