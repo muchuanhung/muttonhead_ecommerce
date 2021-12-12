@@ -1,3 +1,28 @@
 @import "../base/color";
 @import "../base/breakpoint";
 @import "../base/shadow";
+
+/* -- Header -- */
+header {
+  height: 175px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: var(--bg-color);
+  @extend %standard-boxshadow;
+}
+
+.toolbar {
+  height: 28px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: lightgray;
+}
+
+.announcement {
+  background-color: #111010;
+  color: #f3f0ec;
+  font-size: px;
+  text-align: center;
+}
