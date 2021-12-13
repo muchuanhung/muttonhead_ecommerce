@@ -3,3 +3,78 @@
 @import "../base/shadow";
 
 /* -- Footer -- */
+
+footer {
+  display: none;
+  background-color: #f7f7f9;
+  color: #080808;
+  padding: 24px 24px;
+  @include pc-media {
+    display: block;
+  }
+  .footer-container {
+    letter-spacing: 0.75px;
+    line-height: 150%;
+    max-width: $max-width;
+    margin: 0 auto;
+    &__brand {
+      padding: 16px 0px;
+      display: flex;
+      justify-content: space-between;
+
+      &__email {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 300px;
+        & p {
+          margin-top: 1rem;
+        }
+        &__newsletter {
+          height: 30%;
+          margin-top: 1rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 2px solid;
+          &__input {
+            padding: 0.5rem 0.5rem;
+            border: none;
+            background-color: #f7f7f9;
+          }
+          &__btn {
+            transform: scale(2);
+            padding: 0rem 0.5rem;
+            background-color: #f7f7f9;
+            cursor: pointer;
+          }
+          &__btn:hover {
+            opacity: 0.9;
+          }
+          &__btn:active {
+            opacity: 0.8;
+          }
+        }
+        &__icons {
+          height: 30%;
+          margin-top: 1rem;
+          display: flex;
+          &__social {
+            transform: scale(2);
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
+
+      &__info-column__info-list {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .footer-container__copyright {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+  }
+}
