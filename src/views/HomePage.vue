@@ -1,5 +1,5 @@
 <template>
-  <h1>
-   homepage
-  </h1>
+  <div class="container py-5">
+   
+  </div>
 </template>

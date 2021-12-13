@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
+//404 Not Found 頁面被呼叫的時機是「所有的路由都匹配不到的情況」
+import PageNotFound from '../views/PageNotFound.vue'
+//首頁
+import HomePage from '../views/HomePage.vue'
 
 Vue.use(VueRouter)
 
@@ -16,7 +19,13 @@ const routes = [
   {
     path: '/homepage',
     name: 'homepage',
-    component: () => import('../views/HomePage.vue')
+    component: HomePage
+  },
+  //分類頁
+  {
+    path: '/category',
+    name: 'category',
+    component: () => import('../views/Category.vue')
   },
   //商品頁面
   {
@@ -36,12 +45,6 @@ const routes = [
     name: 'checkout',
     component: () => import('../views/Checkout.vue')
   },
-  //分類頁
-  {
-    path: '/category',
-    name: 'category',
-    component: () => import('../views/Category.vue')
-  },
   //搜尋
   {
     path: '/search',
@@ -59,7 +62,7 @@ const routes = [
   //星號 (*) 是萬用字元，這裡代表「所有的網址」
     path: '*',
     name: 'not-found',
-    component: () => import('../views/PageNotFound.vue')
+    component: PageNotFound
   }
 ]
 

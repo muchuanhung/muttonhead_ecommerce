@@ -6,23 +6,84 @@
 header {
   height: 175px;
   width: 100%;
-  position: fixed;
   z-index: 10;
-  background-color: var(--bg-color);
   @extend %standard-boxshadow;
-}
+  @include pc-media {
+    display: block;
+  }
 
-.toolbar {
-  height: 28px;
-  width: 100%;
-  position: fixed;
-  z-index: 10;
-  background-color: lightgray;
-}
+  .toolbar {
+    height: 28px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 2.5fr) 1fr;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    &__item-menu {
+      grid-column: 2 / 3;
+    }
+    &__item-icons {
+      grid-column: 3 / 4;
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: end;
+      grid-gap: 2rem;
+    }
+  }
 
-.announcement {
-  background-color: #111010;
-  color: #f3f0ec;
-  font-size: px;
-  text-align: center;
+  .navbar {
+    &__toggle {
+      display: none;
+    }
+    &__toggle-label {
+      width: 56px;
+      height: 56px;
+      font-size: 17px;
+      cursor: pointer;
+      line-height: 56px;
+      text-align: center;
+      @include pc-media {
+        display: none;
+      }
+    }
+  }
+
+  .header-container {
+    width: 100%;
+    margin: 0 auto;
+    &__navagation {
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+      align-items: center;
+      &__brand {
+        grid-column: 3 / 4;
+      }
+      &__header-actions01 {
+        grid-column: 2 / 3;
+      }
+      &__header-actions02 {
+        grid-column: 4 / 5;
+      }
+    }
+    &__category {
+      margin: 0 auto;
+      display: grid;
+      grid-auto-flow: column;
+      align-items: center;
+    }
+  }
+
+  .announcement {
+    font-size: 17px;
+    letter-spacing: 0.75px;
+    line-height: 150%;
+    background-color: #111010;
+    color: #f3f0ec;
+    display: grid;
+    justify-content: center;
+  }
 }

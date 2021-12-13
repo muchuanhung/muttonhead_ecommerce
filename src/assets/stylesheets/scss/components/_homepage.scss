@@ -1,0 +1,16 @@
+@import "../base/color";
+@import "../base/breakpoint";
+
+/* -- Home page -- */
+.body {
+  background-color: pink;
+  position: relative;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 14px;
+  position: relative;
+  @include pc-media {
+    padding: 14px 24px;
+    height: 1920px;
+  }
+}
