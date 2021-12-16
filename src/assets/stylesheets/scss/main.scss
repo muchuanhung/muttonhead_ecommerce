@@ -1,8 +1,10 @@
 /* ------- basic setting ------- */
 @import "./base/reset";
-
-/* ------- component setting ------- */
-@import "./components/homepage";
+@import "./base/basic";
+@import "./base/breakpoint";
+@import "./base/color";
+@import "./base/color";
+@import "./base/shadow";
 
 /* ------- layout setting ------- */
 @import "./layout/header";

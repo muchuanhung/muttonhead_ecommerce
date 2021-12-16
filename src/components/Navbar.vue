@@ -20,6 +20,7 @@
       </div> 
   <!-- Header-area -->
   <div class="header-container">
+     <!-- Navagation area -->
     <div class="header-container__navagation">
       <!-- 漢堡排 -->
       <input
@@ -32,45 +33,51 @@
         ><i class="fas fa-bars"></i
       ></label>
 
-      <!-- logo -->
+      <!-- head logo -->
       <div class="header-container__navagation__brand">
-      <router-link to="" class="brand-header-link">
+      <router-link 
+      to="/HomePage" 
+      class="router-link mr-3">
       <img
         :src="require('./../assets/images/logo.png')"
         alt="MuttonHead logo"
       />
       </router-link>
       </div>
-      <!-- head actions01 -->
-      <div class="header-container__navagation__header-actions01">
-        <router-link to="" class="header-actions__header-link">
-          <i class="fas fa-search"></i>
-        </router-link>
-     </div>
 
+     
+      <!-- head actions01 -->
+        <div class="header-container__navagation__header-actions01">
+          <router-link to="" class="">
+            <i class="fas fa-search"></i>
+          </router-link>  
+        </div>
+    
       <!-- head actions02 -->
-       <div class="header-container__navagation__header-actions02">
-        <router-link to="" class="header-actions__header-link">
-          <i class="far fa-user-circle"></i>
-        </router-link> 
-         <router-link to="" class="header-actions__header-link">
-          <i class="fas fa-shopping-cart"></i>
-        </router-link>      
-      </div>
+        <div class="header-container__navagation__header-actions02">
+          <router-link to="" class="">
+            <i class="far fa-user-circle"></i>
+          </router-link> 
+          <router-link to="" class="">
+            <i class="fas fa-shopping-cart"></i>
+          </router-link>      
+        </div>
+      
     </div> 
-      <!-- head category -->
-        <div class="header-container__category">
-          <router-link to="" class="router-link mr-3">廚房餐桌</router-link>
-          <router-link to="" class="router-link mr-3">空間佈置</router-link>
-          <router-link to="" class="router-link mr-3">質感生活</router-link>
-          <router-link to="" class="router-link mr-3">品味衣著</router-link>
-          <router-link to="" class="router-link mr-3">所有分類</router-link>
-          <router-link to="" class="router-link mr-3">關於我們</router-link>    
-        </div>   
-     <!-- announcemount宣傳公告 -->
-      <div>
+    <!-- category area -->
+    <div class="header-container__category">
+      <div class="header-container__category__expand">
+        <router-link to="" class="action">SHOP</router-link>
+        <router-link to="" class="action">NEW ARRIVALS</router-link>
+        <router-link to="" class="action">BEST SELLERS</router-link>
+        <router-link to="" class="action">SALE</router-link>
+        <router-link to="" class="action">GIFT SHOP</router-link>
+      </div>
+    </div>   
+    <!-- announcemount宣傳公告 -->
+    <div>
       <announcement/>
-      </div> 
+    </div> 
   </div>
   
   </header>

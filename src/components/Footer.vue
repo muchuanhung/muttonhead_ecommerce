@@ -39,7 +39,7 @@
         <ul class="footer-container__brand__info-column__info-list">
           <li class="footer-container__brand__info-column__info-list__item">
             <router-link
-              to=""
+              to="/About"
               class="footer-container__brand__info-column__info-list__item__link"
               >About Us</router-link
             >

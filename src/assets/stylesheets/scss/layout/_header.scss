@@ -54,36 +54,58 @@ header {
     width: 100%;
     margin: 0 auto;
     &__navagation {
-      height: 100%;
+      height: 150px;
       width: 100%;
+      z-index: 10;
       display: grid;
-      grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+      grid-template-columns: 1fr 0.1fr minmax(600px, 2.5fr) 0.3fr 1fr;
       align-items: center;
       &__brand {
         grid-column: 3 / 4;
+        margin-top: 10px;
+        display: grid;
+        justify-content: center;
       }
       &__header-actions01 {
+        transform: scale(1.5);
         grid-column: 2 / 3;
+        grid-row: 1 / 1;
+        display: grid;
+        justify-content: center;
       }
       &__header-actions02 {
+        transform: scale(1.5);
         grid-column: 4 / 5;
+        grid-row: 1 / 1;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: center;
+        grid-gap: 1rem;
       }
     }
     &__category {
       margin: 0 auto;
       display: grid;
-      grid-auto-flow: column;
-      align-items: center;
+      grid-template-columns: 1fr minmax(800px, 3fr) 1fr;
+      &__expand {
+        grid-column: 2 / 3;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: center;
+        grid-gap: 8rem;
+        padding: 10px;
+      }
     }
   }
 
   .announcement {
+    height: 38px;
+    padding-top: 5px;
     font-size: 17px;
     letter-spacing: 0.75px;
-    line-height: 150%;
     background-color: #111010;
     color: #f3f0ec;
-    display: grid;
+    display: flex;
     justify-content: center;
   }
 }
