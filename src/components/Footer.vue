@@ -46,21 +46,21 @@
           </li>
           <li class="footer-container__brand__info-column__info-list__item">
             <router-link
-              to=""
+              to="/shop"
               class="footer-container__brand__info-column__info-list__item__link"
               >Our Shop</router-link
             >
           </li>
           <li class="footer-container__brand__info-column__info-list__item">
             <router-link
-              to=""
+              to="/brand-ambassador"
               class="footer-container__brand__info-column__info-list__item__link"
               >Brand Ambassador Program</router-link
             >
           </li>
           <li class="footer-container__brand__info-column__info-list__item">
             <router-link
-              to=""
+              to="/size-charts"
               class="footer-container__brand__info-column__info-list__item__link"
               >Size Charts</router-link
             >
@@ -73,35 +73,35 @@
         <ul class="footer-container__brand__info-column__info-list">
           <li class="footer-container__brand__info-column__info-list__item">
             <router-link
-              to=""
+              to="/contact"
               class="footer-container__brand__info-column__info-list__item__link"
               >Contact Us</router-link
             >
           </li>
           <li class="footer-container__brand__info-column__info-list__item">
             <router-link
-              to=""
+              to="/return"
               class="footer-container__info-column__info-list__item__link"
               >Return & Exchange</router-link
             >
           </li>
           <li class="footer-container__info-column__info-list__item">
             <router-link
-              to=""
+              to="/shipping"
               class="footer-container__info-column__info-list__item__link"
               >Shipping</router-link
             >
           </li>
           <li class="footer-container__info-column__info-list__item">
             <router-link
-              to=""
+              to="/faq"
               class="footer-container__info-column__info-list__item__link"
               >FAQ</router-link
             >
           </li>
           <li class="footer-container__info-column__info-list__item">
             <router-link
-              to=""
+              to="/wholesale"
               class="footer-container__info-column__info-list__item__link"
               >Wholesale & Custom Orders</router-link
             >
@@ -114,21 +114,21 @@
         <ul class="footer-container__brand__info-column__info-list">
           <li class="footer-container__brand__info-column__info-list__item">
             <router-link
-              to=""
+              to="/brand-ambassadors"
               class="footer-container__brand__info-column__info-list__item__link"
               >Brand Ambassdors</router-link
             >
           </li>
           <li class="footer-container__brand__info-column__info-list__item">
             <router-link
-              to=""
+              to="/event"
               class="footer-container__brand__info-column__info-list__item__link"
               >Events</router-link
             >
           </li>
           <li class="footer-container__brand__info-column__info-list__item">
             <router-link
-              to=""
+              to="/mutt"
               class="footer-container__brand__info-column__info-list__item__link"
               >Mutt of the Month</router-link
             >

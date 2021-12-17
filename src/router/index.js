@@ -57,6 +57,74 @@ const routes = [
     name: 'about',
     component: () => import('../views/About.vue')
   },
+  // <---巢狀路由-Single-Pages--->
+  //shop
+  {
+    path: '/shop',
+    name: 'shop',
+    component: () => import('../views/pages/Shop.vue')
+  },
+  //Brand-Ambassador
+  {
+    path: '/brand-ambassador',
+    name: 'brand-ambassador',
+    component: () => import('../views/pages/Brand-Ambassador.vue')
+  },
+  //Size-charts
+  {
+    path: '/size-charts',
+    name: 'size-charts',
+    component: () => import('../views/pages/Size-charts.vue')
+  },
+   //Contact
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import('../views/pages/Contact.vue')
+  },
+   //return
+  {
+    path: '/return',
+    name: 'return',
+    component: () => import('../views/pages/Return.vue')
+  },
+   //Shipping
+  {
+    path: '/shipping',
+    name: 'shipping',
+    component: () => import('../views/pages/Shipping.vue')
+  },
+   //FAQ
+  {
+    path: '/faq',
+    name: 'faq',
+    component: () => import('../views/pages/FAQ.vue')
+  },
+   //Wholesale
+  {
+    path: '/wholesale',
+    name: 'wholesale',
+    component: () => import('../views/pages/Wholesale.vue')
+  },
+   //Brand-Ambassadors
+  {
+    path: '/brand-ambassadors',
+    name: 'brand-ambassadors',
+    component: () => import('../views/pages/Brand-Ambassadors.vue')
+  },
+   //Event
+  {
+    path: '/event',
+    name: 'event',
+    component: () => import('../views/pages/Event.vue')
+  },
+   //Mutt
+  {
+    path: '/mutt',
+    name: 'mutt',
+    component: () => import('../views/pages/Mutt.vue')
+  },
+
   //搜索不到頁面
   {
   //星號 (*) 是萬用字元，這裡代表「所有的網址」
@@ -64,6 +132,8 @@ const routes = [
     name: 'not-found',
     component: PageNotFound
   }
+
+  
 ]
 
 const router = new VueRouter({

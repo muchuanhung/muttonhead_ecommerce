@@ -2,16 +2,16 @@
     <div class="about-wrapper">
 			<h4 class="about-wrapper__title">ca ABOUT US</h4>
 
-        <div class="section-wrapper__items">
-          <router-link to="" class="sabout-wrapper__items-photo">
+        <div class="about-wrapper__items">
+          <router-link to="" class="about-wrapper__items__photo">
           <img src="./../assets/images/aboutus/about-01.png" />
           </router-link>
 
-            <router-link to="" class="section-wrapper__items-photo">
+            <router-link to="" class="about-wrapper__items__photo">
           <img src="./../assets/images/aboutus/about-02.png" />
           </router-link>
 
-            <router-link to="" class="section-wrapper__items-photo">
+            <router-link to="" class="about-wrapper__items__photo">
           <img src="./../assets/images/aboutus/about-03.png" />
           </router-link>
         </div>
@@ -28,32 +28,43 @@
 
 
 .about-wrapper {
-   margin-top: 4.6rem;
-  width: 100%;
+  margin: 5rem 1rem 2rem 1rem;
   height: 100%;
+  //處理溢版問題
+  overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+  &__title {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+	font-size: 2rem;
+	font-weight: 700;
+	color: #333;
+	cursor: default;
+  }
 
   &__items{
     display: flex;
-    justify-content: space-evenly;
-    &__description{
-    padding: 10px;
-    } 
+    justify-content:space-around;
+    flex-direction: column;
+    align-items: center;
+    &__photo img{
+    object-fit: cover;
+    display: block;
+    height: 480px;
+    width: 960px;
+    }
   } 
 }
 
-.about-wrapper__items-photo {
-   margin-top: 4.6rem;
-  width: 100%;
-  height: 100%;
-
-  &__items{
-    display: flex;
-    justify-content: space-evenly;
-    &__description{
-    padding: 10px;
-    } 
-  } 
+.about-wrapper__items__photo {
+    overflow: hidden;
+    padding: 10px 0;
 }
+
+
+
 
 
 
