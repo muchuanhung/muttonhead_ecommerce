@@ -1,21 +1,30 @@
 <template>
-    <div class="contact-wrapper">
-			<h4 class="contact-wrapper__title">CONTACT US</h4>
-      <div class="contact-wrapper__content">
-        <p class="contact-wrapper__content-text">
-          <strong>General Inquiries:</strong>store@muttonheadstore.com</p>
-         <p class="contact-wrapper__content-text">
-          <strong>Online Orders:</strong>shipping@muttonheadstore.com</p>       
-       </div>  
-       <div class="contact-wrapper__content-address">
-          <strong>163 Roncesvalles Avenue, Toronto, ON.</strong>Phone number: 647-812-2700
-       </div> 
+    <div class="event-wrapper">
+			<h4 class="event-wrapper__title">EVENTS</h4>
+      <div class="event-wrapper__content">
+       <div class="event-wrapper__items">
+        <router-link to="" class="event-wrapper__items__photo">
+          <img src="../../assets/images/pages/sample-01.jpg" />
+        </router-link>
+        <div class="faq-wrapper__content__sub-title">
+        <p> Bi-Annual Sample Sale </p>
+        </div>
+       </div>
+       <div class="event-wrapper__items">
+        <router-link to="" class="event-wrapper__items__photo">
+          <img src="../../assets/images/pages/sample-02.jpg" />
+        </router-link>
+        <div class="event-wrapper__content__sub-title">
+        <p> Muttonhead x Save Our Scruff Awareness Event </p>
+        </div>
+       </div>
+      </div> 
     </div> 
 </template>
 
 
 <style lang="scss" scoped>
-.contact-wrapper {
+.event-wrapper {
   margin: 5rem 1rem 2rem 1rem;
   //處理溢版問題
   overflow-x: hidden;
@@ -30,20 +39,32 @@
 	font-size: 2rem;
 	font-weight: 700;
   }
+  
 
    &__content{
-   flex-direction: column;
-   text-align: center;
-   letter-spacing: 0.75px;
-   line-height: 200%;
-   padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  letter-spacing: 0.75px;
+  line-height: 200%;
+  padding: 20px 0;
   }
-   &__content-address{
-   display: flex;
-   letter-spacing: 0.75px;
-   line-height: 150%;
-   text-align: center;
-   flex-direction: column;
-  }
+  &__items{
+    display: flex;
+    flex-direction: column;
+    padding:0% 20px;
+    align-items: center;
+    &__photo img{
+    object-fit: cover;
+    display: block;
+   width: 458px;
+ height: 458px;
+    }
+  } 
 }
+
+
+
+
+
 </style>

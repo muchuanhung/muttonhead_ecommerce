@@ -58,7 +58,6 @@
   } 
 }
 
-
 .brand-ambassador-wrapper__address-content__text {
   text-align: center;
   letter-spacing: 0.75px;
