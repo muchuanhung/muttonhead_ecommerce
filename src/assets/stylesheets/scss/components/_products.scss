@@ -4,18 +4,27 @@
 @import "../base/reset";
 
 /* -- products -- */
-products {
+
+category {
   display: none;
   padding: 36px 48px;
+  margin-bottom: 16px;
   @include pc-media {
     display: block;
   }
 }
 
-/* ----- pagination ----- */
-.pagination {
-  width: 100%;
-  margin: 5px auto 20px;
-  text-align: center;
-  cursor: default;
+.product-wrapper {
+  margin: 5rem 1rem 2rem 1rem;
+  height: 100vh;
+  //處理溢版問題
+  overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+  max-width: 50%;
+  background-color: green;
+}
+.product-list__cards {
+  width: 286px;
+  height: 180px;
 }

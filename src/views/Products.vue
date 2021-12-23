@@ -1,22 +1,39 @@
 <template>
-  <products>
-	<!-- product list -->
-		<div class="product-list" id="product-list">
+	<category>
+    <div class="products-wrapper">
+			<!-- product list -->
 			<!-- products will be rendered here -->
+			<div class="product-list__cards">
+				<img src="https://via.placeholder.com/300">
 
-		</div>
-    <!-- pagination -->
-	<div class="pagination">
-		<p>
-			<span class="current-page">14</span> / <span class="total-pages">14</span>
-		</p>
-	</div>
+				<div class="card-body">
+        <p class="card-text title-wrap">
+          <router-link to="#">
+            Deangelo Farrell
+          </router-link>
+        </p>
+        <span class="badge badge-secondary">中式料理</span>
+        <p class="card-text text-truncate">
+          Voluptates veritatis blanditiis ipsam. Tempora mol
+        </p>
+      </div>
 
 
 
+			</div>
 
-	</products>
+
+
+			
+
+	
+    </div> 
+	</category>
 </template>
+
+
+
+
 
 
 <script>
