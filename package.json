@@ -16,6 +16,7 @@
     "swiper": "^7.3.2",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.1.1",
+    "vue-dynamic-dropdown": "^1.0.12",
     "vue-router": "^3.2.0",
     "vue-sweetalert2": "^5.0.2"
   },

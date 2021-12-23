@@ -67,7 +67,7 @@
     <!-- category area -->
     <div class="header-container__category">
       <div class="header-container__category__expand">
-        <router-link to="" class="action">SHOP</router-link>
+        <router-link to="/category" class="action">SHOP</router-link>
         <router-link to="" class="action">NEW ARRIVALS</router-link>
         <router-link to="" class="action">BEST SELLERS</router-link>
         <router-link to="" class="action">SALE</router-link>

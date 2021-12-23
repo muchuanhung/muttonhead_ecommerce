@@ -1,0 +1,63 @@
+@import "../base/breakpoint";
+@import "../base/color";
+@import "../base/shadow";
+@import "../base/reset";
+
+/* -- Sidebar -- */
+sidebar {
+  display: none;
+  padding: 36px 48px;
+  @include pc-media {
+    display: block;
+  }
+}
+
+.sidebars {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 180px;
+  margin-left: 10rem;
+  margin-top: 100px;
+  &__group {
+    border-top: 1px solid lightgray;
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding: 30px 0;
+  }
+  &__groups {
+    border-top: 1px solid lightgray;
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding: 30px 0;
+  }
+}
+
+ul {
+  padding: 10px 0;
+}
+
+.subcolor:hover {
+  display: inline-block;
+  position: relative;
+  color: gray;
+}
+
+.sidebars__group__icons {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.dropdown__submenu {
+  padding-left: 1rem;
+}
+
+.dropdown-data-style {
+  display: flex;
+  flex-direction: column;
+}

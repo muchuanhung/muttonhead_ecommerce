@@ -3,10 +3,14 @@
 @import "./base/basic";
 @import "./base/breakpoint";
 @import "./base/color";
-@import "./base/color";
+@import "./base/reset";
 @import "./base/shadow";
 
+/* ------- component setting ------- */
+@import "./components/category";
+
 /* ------- layout setting ------- */
+@import "./layout/pagination";
 @import "./layout/header";
 @import "./layout/footer";
 

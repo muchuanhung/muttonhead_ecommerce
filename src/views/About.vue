@@ -23,10 +23,6 @@
 
 
 <style lang="scss" scoped>
-
-
-
-
 .about-wrapper {
   margin: 5rem 1rem 2rem 1rem;
   height: 100%;
@@ -62,10 +58,4 @@
     overflow: hidden;
     padding: 10px 0;
 }
-
-
-
-
-
-
 </style>

@@ -1,0 +1,21 @@
+@import "../base/breakpoint";
+@import "../base/color";
+@import "../base/shadow";
+@import "../base/reset";
+
+/* -- products -- */
+products {
+  display: none;
+  padding: 36px 48px;
+  @include pc-media {
+    display: block;
+  }
+}
+
+/* ----- pagination ----- */
+.pagination {
+  width: 100%;
+  margin: 5px auto 20px;
+  text-align: center;
+  cursor: default;
+}
