@@ -4,21 +4,11 @@
 @import "../base/reset";
 
 /* -- Sidebar -- */
-sidebar {
-  display: none;
-  padding: 36px 48px;
-  @include pc-media {
-    display: block;
-  }
-}
 
 .sidebars {
-  height: 100%;
-  width: 100%;
-  min-height: 100vh;
-  max-width: 180px;
-  margin-left: 10rem;
-  margin-top: 100px;
+  position: relative;
+  cursor: pointer;
+  width: 200px;
   &__group {
     border-top: 1px solid lightgray;
     font-size: 14px;
@@ -46,7 +36,6 @@ ul {
 }
 
 .sidebars__group__icons {
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;

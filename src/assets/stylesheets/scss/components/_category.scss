@@ -3,3 +3,34 @@
 @import "../layout/pagination";
 @import "../components/sidebar";
 @import "../components/products";
+
+.category {
+  padding: 36px 48px;
+  margin-bottom: 16px;
+  @include pc-media {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.category {
+  margin-top: 100px;
+  position: relative;
+}
+
+.all__products-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+  margin-left: 15rem;
+  margin-top: 100px;
+  max-width: 80%;
+}
+
+.product-content-items-card {
+}
+
+Sidebar {
+  position: absolute;
+  left: 20px;
+}

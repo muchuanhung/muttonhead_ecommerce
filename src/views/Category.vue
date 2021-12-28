@@ -1,17 +1,19 @@
 <template>
-   <div id="category">
+   <div class="category">
     <!-- Sidebar 側邊欄位 -->
     <Sidebar />
 
     
     <!-- Products 全部產品-->
     <!-- 用v-for迴圈的v-on綁定產品id再用v-bind把object回傳回卡片-->
+    <div class="all__products-card">
     <Products 
+      class="product-content-items-card"
       v-for="product in Products"
       :key="product.id"
-      :product="product"
+      :initialproduct="product"
        />
-    
+    </div>
 
     <!-- 分頁標籤 RestaurantPagination -->
     <Pagination />
@@ -44,7 +46,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "New Arrivals",
     },
 	},
  {
@@ -58,7 +60,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "TOPS",
     },
 	},
 	{
@@ -72,7 +74,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "TOPS",
     },
 	},
 	{
@@ -86,7 +88,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "Longsleeve Shirts",
     },
 	},
 	{
@@ -100,7 +102,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "Longsleeve Shirts",
     },
 	},
 	{
@@ -114,7 +116,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "Buttondown Shirts",
     },
 	},
 	{
@@ -128,7 +130,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "Buttondown Shirts",
     },
 	},
 	{
@@ -142,7 +144,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "Appearel",
     },
 	},
 	{
@@ -156,7 +158,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "Appearel",
     },
 	},
 	{
@@ -170,7 +172,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "Accessories",
     },
 	},
 	{
@@ -184,7 +186,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "Accessories",
     },
 	},
 	{
@@ -198,7 +200,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "Outerwear",
     },
 	},
 	{
@@ -212,7 +214,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "Outerwear",
     },
 	},
 	{
@@ -226,7 +228,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "New Arrivals",
     },
 	},
 	{
@@ -240,7 +242,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "New Arrivals",
     },
 	},
 	{
@@ -254,7 +256,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "New Arrivals",
     },
 	},
 	{
@@ -268,7 +270,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "TOPS",
     },
 	},
 	{
@@ -282,7 +284,7 @@ const dummyData = {
     CategoryId: 2,
     Category: {
     id: 2,
-    name: "日本料理",
+    name: "Appearel",
     },
 	}
 ],
@@ -340,9 +342,9 @@ export default {
       //表示要顯示那些id產品
       categoryId: -1,
       currentpage: 1,
-      totalPage: -1
-
+      totalPage: -1,
     };
+
   },
   //觸發fetchProductsData函式
   created() {

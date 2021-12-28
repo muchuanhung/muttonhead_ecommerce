@@ -1,7 +1,7 @@
 <template>
    <!-- sidebar -->
 <sidebar>
-  <nav class="sidebars">
+  <div class="sidebars">
    <ul>
      <!-- 綁定click事件  -->
      <div class="sidebars__group" >
@@ -47,7 +47,7 @@
      
    
    </ul>
-  </nav> 
+  </div> 
 
 </sidebar>  
 </template>

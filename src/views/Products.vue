@@ -1,20 +1,18 @@
 <template>
-	<category>
+	<products>
     <div class="products-wrapper">
 			<!-- product list -->
 			<!-- products will be rendered here -->
-			<div class="product-list__cards">
-				<img src="https://via.placeholder.com/300">
-			<h4>FLEECE FIELD ZIP - BLACK RAINBOW SPECKLE</h4>
-			<p>$130.00 CAD</p>
+			<div class="products-wrapper__picture">
+				<img class="products-wrapper__picture-product" :src="product.productImg">
+				<img class="products-wrapper__picture-wear" :src="product.wearingImg">
 			</div>
-
-	
-        
-       
-    
+			<div class="products-wrapper__info">
+					<p class="products-wrapper__info__title">{{product.name}}</p>
+					<p class="products-wrapper__info__price">{{product.price}}</p>
+			</div>        
     </div> 
-	</category>
+	</products>
 </template>
 
 
@@ -25,10 +23,16 @@
 <script>
 export default {
 	props:{
-		product: {
+		initialproduct: {
 		type: Object,
 		require: true
 		}
-	}
+	},
+
+	data() {
+		return {
+			product: this.initialproduct,
+		}
+	},
 }
 </script>

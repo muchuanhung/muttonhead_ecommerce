@@ -84,7 +84,7 @@
 <style lang="scss" scoped>
 
 .swiper {
-  margin-top: 4.6rem;
+  margin-top: 6rem;
   width: 100%;
   height: 550px;
 }
