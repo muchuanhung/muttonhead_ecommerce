@@ -10,6 +10,7 @@ import '@fortawesome/fontawesome-free/js/all.js'
 import VueSweetalert2 from 'vue-sweetalert2';
 
 
+
 //新增輪播效果
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import swiper, { Navigation, Pagination, Autoplay, EffectFade } from 'swiper'

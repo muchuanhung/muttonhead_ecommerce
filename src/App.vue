@@ -10,6 +10,8 @@
 
 <script>
 //製作component元件導入
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 
