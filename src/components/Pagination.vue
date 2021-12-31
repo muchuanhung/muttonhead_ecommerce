@@ -2,13 +2,10 @@
    <!-- pagination -->
 	<div class="pagination justify-content-center">
 		<!-- 回到上一頁 previousPage -->
-		<li 
-			v-show="previousPage"
-			:class="['page-item', { disabled: currentPage === 1 }]"
-		>
+		<li class="page-item disabled">	
 		 <router-link
 		 	class="page-link"
-      aria-label="Previous"
+      tabindex="-1"
       :to="{
       name: 'Products',
       query: { categoryId, page: previousPage }
@@ -35,13 +32,9 @@
 		</li>	
 
 		<!-- 前往下一頁 nextPage -->
-		<li 
-			v-show="nextPage"
-			:class="['page-item', { disabled: currentPage === totalPage.length }]"
-		>
+		<li class="page-item">	
 		 <router-link
 		 	class="page-link"
-      aria-label="Next"
       :to="{
       name: 'Products',
       query: { categoryId, page: nextPage }

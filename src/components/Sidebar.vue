@@ -1,6 +1,18 @@
 <template>
-   <!-- sidebar -->
 <sidebar>
+  <!-- search-box -->
+   <div class="product-content-nav-search">
+      <input
+        placeholder="Search our store"
+        type="text"
+        required
+        v-model="filterName"
+        @keyup.enter="filterItem"
+      />
+      <div>
+        <i class="fas fa-search" @click="filterItem"></i>
+      </div>
+    </div>
   <div class="sidebars">
    <ul>
      <!-- 綁定click事件  -->
@@ -16,40 +28,27 @@
            </div>
         
         <!-- 連動展開submenu  -->
-        <div v-show="isShowRouteDropdown" class="dropdown">
-          <router-link to="#" class="subcolor">Tops</router-link>
+        <div v-show="isShowRouteDropdown" class="dropdown">  
             <div class="dropdown__submenu">
-              <li><router-link to="#" class="subcolor">Longsleeve Shirts</router-link></li>
-              <li><router-link to="#" class="subcolor">Buttondown Shirts</router-link></li>
+              <li
+                v-for="category in categories"
+                :key="category.id"
+              >
+              <router-link
+                class="subcolor"
+               :to="{ name: 'categories', query: { categoryId: category.id } }"
+              >
+                {{ category.name }}
+              </router-link>
+              </li>
+
             </div>
         </div> 
-     </div> 
-
-      <div class="sidebars__groups">
-           <div class="sidebars__group__icons" @click.stop.prevent="isShowRouteDropdown02 = !isShowRouteDropdown02">
-             SHOP
-              <!-- Icon Switch -->
-              <span  v-show="!isShowRouteDropdown02">
-              <i class="fas fa-angle-down"></i></span>
-              <span  v-show="isShowRouteDropdown02">
-              <i class="fas fa-angle-up"></i></span>
-           </div>
-        <div v-show="isShowRouteDropdown02" class="dropdown">
-           <div class="dropdown__submenu">
-            <li><router-link to="#" class="subcolor"><strong>Appearel</strong></router-link></li>
-            <li><router-link to="#" class="subcolor">Accessories</router-link></li>
-            <li><router-link to="#" class="subcolor">Outerwear</router-link></li>
-            <li><router-link to="#" class="subcolor"><strong>New Arrivals</strong></router-link></li>
-           </div> 
-        </div> 
-     </div> 
-     
-     
-   
+     </div>    
    </ul>
   </div> 
-
 </sidebar>  
+
 </template>
 
 
@@ -59,9 +58,15 @@ export default {
   data(){
     return{
       isShowRouteDropdown: false,
-      isShowRouteDropdown02: false,
     }
   },
+  //分類標籤陣列排列
+  	props:{
+		  categories: {
+		    type: Array,
+		    require: true
+		}
+	}
 }
 </script>
 

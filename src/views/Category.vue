@@ -1,7 +1,9 @@
 <template>
    <div class="category">
     <!-- Sidebar 側邊欄位 -->
-    <Sidebar />
+    <Sidebar
+      :categories="categories" 
+    />
 
     
     <!-- Products 全部產品-->

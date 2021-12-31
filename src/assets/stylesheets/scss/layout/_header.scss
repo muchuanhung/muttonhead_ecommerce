@@ -38,6 +38,7 @@ header {
       display: none;
     }
     &__toggle-label {
+      display: none;
       width: 56px;
       height: 56px;
       font-size: 17px;
@@ -67,13 +68,6 @@ header {
         display: grid;
         justify-content: center;
       }
-      &__header-actions01 {
-        transform: scale(1.5);
-        grid-column: 2 / 3;
-        grid-row: 1 / 1;
-        display: grid;
-        justify-content: center;
-      }
       &__header-actions02 {
         transform: scale(1.5);
         grid-column: 4 / 5;
@@ -93,7 +87,7 @@ header {
         display: grid;
         grid-auto-flow: column;
         justify-content: center;
-        grid-gap: 8rem;
+        grid-gap: 5rem;
         padding: 10px;
       }
     }

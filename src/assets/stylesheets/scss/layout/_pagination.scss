@@ -1,6 +1,32 @@
 /* ----- pagination ----- */
 .pagination {
-  width: 100%;
-  margin-top: 30px;
+  margin-top: 20px;
   cursor: default;
+  display: flex;
+  justify-content: center;
+}
+
+.page-link {
+  height: 37px;
+  padding: 7px 20px;
+  color: lightgray;
+}
+
+.page-item.active .page-link,
+.page-item.active span {
+  color: white;
+  background-color: lightgray;
+  border-color: darkgray;
+  z-index: 1;
+}
+
+.page-item span {
+  color: lightgray;
+}
+
+a.page-link:hover,
+a.page-link:hover span {
+  color: white;
+  background-color: lightgray;
+  border-color: darkgray;
 }

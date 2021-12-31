@@ -44,15 +44,7 @@
       />
       </router-link>
       </div>
-
-     
-      <!-- head actions01 -->
-        <div class="header-container__navagation__header-actions01">
-          <router-link to="" class="">
-            <i class="fas fa-search"></i>
-          </router-link>  
-        </div>
-    
+        
       <!-- head actions02 -->
         <div class="header-container__navagation__header-actions02">
           <router-link to="" class="">
@@ -68,10 +60,10 @@
     <div class="header-container__category">
       <div class="header-container__category__expand">
         <router-link to="/category" class="action">SHOP</router-link>
-        <router-link to="" class="action">NEW ARRIVALS</router-link>
-        <router-link to="" class="action">BEST SELLERS</router-link>
-        <router-link to="" class="action">SALE</router-link>
-        <router-link to="" class="action">GIFT SHOP</router-link>
+        <router-link to="/category" class="action">NEW ARRIVALS</router-link>
+        <router-link to="/category" class="action">BEST SELLERS</router-link>
+        <router-link to="/category" class="action">SALE</router-link>
+        <router-link to="/category" class="action">GIFT SHOP</router-link>
       </div>
     </div>   
     <!-- announcemount宣傳公告 -->
