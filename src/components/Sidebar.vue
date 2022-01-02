@@ -3,22 +3,20 @@
   <!-- search-box -->
    <div class="product-content-nav-search">
       <input
-        placeholder="Search our store"
         type="text"
-        required
-        v-model="filterName"
-        @keyup.enter="filterItem"
+        placeholder="Search..."
       />
-      <div>
-        <i class="fas fa-search" @click="filterItem"></i>
-      </div>
+      <button type="submit" class="btn btn-primary"  @click.prevent="filterItem">
+        <i class="fas fa-search"></i>
+      </button>
     </div>
+
   <div class="sidebars">
    <ul>
      <!-- 綁定click事件  -->
      <div class="sidebars__group" >
          
-           <div class="sidebars__group__icons" @click.stop.prevent="isShowRouteDropdown = !isShowRouteDropdown">
+           <div class="sidebars__group__icons" @click.stop.prevent="isShowRouteDropdown = !isShowRouteDropdown" >
              CATEGORY
              <!-- Icon Switch -->
              <span  v-show="!isShowRouteDropdown">
@@ -28,14 +26,15 @@
            </div>
         
         <!-- 連動展開submenu  -->
-        <div v-show="isShowRouteDropdown" class="dropdown">  
-            <div class="dropdown__submenu">
+        <div v-show="isShowRouteDropdown" class="dropdown" >  
+            <div class="dropdown__submenu" >
               <li
                 v-for="category in categories"
                 :key="category.id"
               >
               <router-link
-                class="subcolor"
+               class="subcolor"
+               v-model="selectedCategory"
                :to="{ name: 'categories', query: { categoryId: category.id } }"
               >
                 {{ category.name }}
@@ -55,6 +54,7 @@
 
 <script>
 export default {
+  //變數資料宣告
   data(){
     return{
       isShowRouteDropdown: false,
@@ -66,7 +66,8 @@ export default {
 		    type: Array,
 		    require: true
 		}
-	}
+	},
+  //搜尋產品關鍵字
 }
 </script>
 

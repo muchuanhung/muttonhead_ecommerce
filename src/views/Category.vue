@@ -1,5 +1,5 @@
 <template>
-   <div class="category">
+   <div class="category" @click="controlCartModel">
     <!-- Sidebar 側邊欄位 -->
     <Sidebar
       :categories="categories" 
@@ -8,7 +8,7 @@
     
     <!-- Products 全部產品-->
     <!-- 用v-for迴圈的v-on綁定產品id再用v-bind把object回傳回卡片-->
-    <div class="all__products-card">
+    <div class="all__products-card" >
     <Products 
       class="product-content-items-card"
       v-for="product in Products"
@@ -336,6 +336,7 @@ categories: [
 
 
 
+
 export default {
   name: 'products',
   components: {
@@ -355,7 +356,6 @@ export default {
       previousPage: -1,
       nextPage: -1
     };
-
   },
   //觸發fetchProductsData函式
   created() {
@@ -380,8 +380,10 @@ export default {
       this.totalPage = totalPage
       this.previousPage = prev
       this.nextPage = next
-    }
+    },
   },
+   
+ 
 };  
 
 </script>
